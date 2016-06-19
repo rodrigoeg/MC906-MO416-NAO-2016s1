@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
 		cout << "Connected\n";
 
 		NAO nao;
-		nao.start();
+		nao.start(clientID);
 
 		simxFinish(clientID);
 	} else {

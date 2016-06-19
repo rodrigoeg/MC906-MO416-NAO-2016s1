@@ -6,6 +6,6 @@ extern "C" {
 
 using namespace std;
 
-void NAO::start() {
+void NAO::start(int clientID) {
 	cout << "NAO started\n";
 }

@@ -9,7 +9,7 @@ using namespace std;
 
 class NAO {
 public:
-    void start();
+    void start(int clientId);
 };
 
 
