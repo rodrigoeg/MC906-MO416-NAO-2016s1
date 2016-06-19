@@ -75,6 +75,7 @@ Thumbs.db
 *.exe
 *.out
 *.app
+bin/
 
 # Compiled Object files
 *.slo
