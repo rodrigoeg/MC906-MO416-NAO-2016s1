@@ -2,7 +2,7 @@
 #define MO416_2016S1_NAO_H
 
 extern "C" {
-    #include "extApi.h"
+#include "extApi.h"
 }
 
 using namespace std;
