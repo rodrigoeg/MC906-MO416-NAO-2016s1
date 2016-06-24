@@ -18,7 +18,7 @@ void NAO::start(int clientID) {
     simxGetVisionSensorImage(clientID, vision1Handle, resolution, &image, 0, simx_opmode_streaming);
 
     simxSetJointTargetPosition(clientID, headHandle, -1.0f, simx_opmode_oneshot);
-    extApi_sleepMs(1000);
+    extApi_sleepMs(2000);
     simxGetVisionSensorImage(clientID, vision1Handle, resolution, &image, 0, simx_opmode_buffer);
     cout<< image << "\n";
 
