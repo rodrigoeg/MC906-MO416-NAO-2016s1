@@ -32,10 +32,10 @@ motionProxy = ALProxy("ALMotion",naoIP, naoPort)
 postureProxy = ALProxy("ALRobotPosture", naoIP, naoPort)
 
 #Go to the posture StandInitZero
-#posture = 'StandZero'
-#print 'Posture Initialization : ' + posture
-#motionProxy.stiffnessInterpolation('Body', 1.0, 1.0)
-#postureProxy.goToPosture(posture,1.0)
+posture = 'StandZero'
+print 'Posture Initialization : ' + posture
+motionProxy.stiffnessInterpolation('Body', 1.0, 1.0)
+postureProxy.goToPosture(posture,1.0)
 
 Head_Yaw=[];Head_Pitch=[];
 L_Hip_Yaw_Pitch=[];L_Hip_Roll=[];L_Hip_Pitch=[];L_Knee_Pitch=[];L_Ankle_Pitch=[];L_Ankle_Roll=[];

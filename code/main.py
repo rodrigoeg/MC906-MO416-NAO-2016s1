@@ -1,4 +1,5 @@
 import math
+import time
 import argparse
 from naoqi import ALProxy
 
@@ -17,15 +18,9 @@ def main(robotIP, PORT=9559):
     x  = 1
     y  = 0
     theta  = 0
-    motionProxy.moveTo(x, y, theta)
-    # Will block until move Task is finished
+    motionProxy.move(x, y, theta)
 
-    ########
-    # NOTE #
-    ########
-    # If moveTo() method does nothing on the robot,
-    # read the section about walk protection in the
-    # Locomotion control overview page.
+    time.sleep(10)
 
     # Go to rest position
     motionProxy.rest()
