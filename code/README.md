@@ -10,14 +10,12 @@ Project based on https://github.com/PierreJac/Project-NAO-Control
 
 Configure the path variables in execute_project.sh and launch_choregraphe_control.sh
 
-Execute
-
-./launch_choregraphe_control.sh
-
 
 Start the simulation in v-rep
 
 
-Execute 
+Execute
+
+./launch_choregraphe_control.sh
 
 ./execute_project.sh
