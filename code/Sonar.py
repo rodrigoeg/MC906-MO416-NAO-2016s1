@@ -44,8 +44,10 @@ class Sonar:
         self.mem_proxy = ALProxy("ALMemory", serverAddr, serverPort)
 
     def getReading(self, echoes=1):
-        """Returns a list with 2 lists inside: each one containing the number of 
-        requested echo readings from left and right sensors. Min 1 echo, max 10."""
+        """
+        Returns a list with 2 lists inside: each one containing the number of 
+        requested echo readings from left and right sensors. Min 1 echo, max 10.
+        """
 
         if echoes > 10:
             echoes = 10
@@ -66,9 +68,11 @@ class Sonar:
         return (lreads, rreads)
 
     def getSampleReading(self, echoes=1, n_readings=1):
-        """The return has the same format as getReading, but every number now is 
+        """
+        The return has the same format as getReading, but every number now is 
         the mean of n_readings. When n_readings is 1, this method is equivalent 
-        to getReading."""
+        to getReading.
+        """
 
         if echoes > 10:
             echoes = 10
