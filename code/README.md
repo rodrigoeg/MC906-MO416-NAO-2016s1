@@ -1,21 +1,21 @@
 #Installation
 
-- download Choregraphe: http://doc.aldebaran.com/1-14/software/installing.html
-- install python sdk: http://doc.aldebaran.com/2-1/dev/python/install_guide.html
-
-Project based on https://github.com/PierreJac/Project-NAO-Control
-
+- Download Webots for NAO (tested with version 8.2.1): https://community.ald.softbankrobotics.com/en/resources/software/language/en-gb
+- Install NAOqi Python SDK (tested with version pynaoqi-python2.7-2.1.4.13): http://doc.aldebaran.com/2-1/dev/python/install_guide.html
 
 #Quickstart
 
-Configure the path variables in execute_project.sh and launch_choregraphe_control.sh
+Configure the paths in env_run.sh and etup_naoqi.sh
 
 
-Start the simulation in v-rep
+Load the scene in Webots and start the simulation
 
 
-Execute
+Execute naoqi:
 
-./launch_choregraphe_control.sh
+./setup_naoqi.sh
 
-./execute_project.sh
+
+Execute the project:
+
+./env_run.sh filename.py
