@@ -4,14 +4,14 @@
 # Original model author: Yvan Bourquin - www.cyberbotics.com
 # Copyright (c) 2014 Cyberbotics Ltd., all rights reserved.
 
-PROTO Nao [
+PROTO Nao_modified [
   field SFVec3f translation 0 0.334 0
   field SFRotation rotation 1 0 0 -1.5708
   field SFString version "5.0"
   field SFInt32 degreeOfFreedom 25
   field SFColor color -1 -1 -1
-  field SFString controller "nao_demo"
-  field SFString controllerArgs ""
+  field SFString controller "naoqisim"
+  field SFString controllerArgs "9559"
   field SFBool synchronization TRUE
   field SFBool selfCollision FALSE
   field SFFloat gpsAccuracy 0.0
