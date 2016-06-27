@@ -43,45 +43,26 @@ class Sonar:
 
         self.mem_proxy = ALProxy("ALMemory", serverAddr, serverPort)
 
-    def getReading(self, echoes=1):
+    def getReading(self):
         """
-        Returns a list with 2 lists inside: each one containing the number of 
-        requested echo readings from left and right sensors. Min 1 echo, max 10.
+        Returns a list with 2 items inside: each one containing the number of
+        requested readings from left and right sensors.
         """
 
-        if echoes > 10:
-            echoes = 10
+        return (self.mem_proxy.getData(self.__left_sonar_addr), self.mem_proxy.getData(self.__right_sonar_addr))
 
-        lreads = list()
-        rreads = list()
-
-        # First reading has no indexing
-        lreads.append(self.mem_proxy.getData(self.__left_sonar_addr))
-        rreads.append(self.mem_proxy.getData(self.__right_sonar_addr))
-
-        for i in range(1, echoes):
-            print(self.__left_sonar_addr + str(i))
-            print(self.__right_sonar_addr + str(i))
-            lreads.append(self.mem_proxy.getData(self.__left_sonar_addr + str(i)))
-            rreads.append(self.mem_proxy.getData(self.__right_sonar_addr + str(i)))
-
-        return (lreads, rreads)
-
-    def getSampleReading(self, echoes=1, n_readings=1):
+    def getSampleReading(self, n_readings=1):
         """
         The return has the same format as getReading, but every number now is 
         the mean of n_readings. When n_readings is 1, this method is equivalent 
         to getReading.
         """
 
-        if echoes > 10:
-            echoes = 10
-
         # Aggregator variable (cheaper than stacking all readings in memory)
-        aggr = np.array(self.getReading(echoes))
+        aggr = np.array(self.getReading())
 
         for k in range(n_readings-1):
-            aggr = aggr + np.array(self.getReading(echoes))
+            aggr = aggr + np.array(self.getReading())
 
         aggr = aggr / n_readings
 

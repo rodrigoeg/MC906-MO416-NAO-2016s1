@@ -19,6 +19,10 @@ def main(robotIP, port=9559):
 
     start_t = time.time()
 
+    # Start walking (sonar appears to start reading correct values only after this)
+    motionProxy.moveToward(0.01, 0, 0)
+    time.sleep(0.5)
+
     # Main loop
     while (time.time() - start_t <= 30):
         # make course corrections
@@ -26,21 +30,32 @@ def main(robotIP, port=9559):
         # little sleep
 
         # Sensor reading step
-        theta_correction = 0;
+        x_velocity = 1
+        y_velocity = 0
+        theta_correction = 0
+
         lread, rread = sonar.getSampleReading(n_readings=10)
 
         print("Sonar readings (lread, rread) = (%.2f, %.2f)" % (lread, rread))
 
         # Course correction decision step (theta is positive counterclockwise)
-        if (lread < 0.4 and rread > 2.0):
-            theta_correction = np.deg2rad(-30)
-        elif (rread < 0.4 and lread > 2.0):
-            theta_correction = np.deg2rad(+30)
+        if (lread < 0.4 and rread > 1.0):
+            theta_correction = np.deg2rad(-20)
+            x_velocity = 0
+        elif (rread < 0.4 and lread > 1.0):
+            theta_correction = np.deg2rad(+20)
+            x_velocity = 0
         elif (lread < 0.4 and rread < 0.4):
-            theta_correction = np.deg2rad(160) # yes, this is dumb
+            if lread < rread:
+                theta_correction = np.deg2rad(-55)
+            else:
+                theta_correction = np.deg2rad(+55)
+            x_velocity = 0
+
+        print("Theta %.2f" % theta_correction)
 
         # Course correction execution step
-        motionProxy.moveToward(1.0, 0, theta_correction)
+        motionProxy.moveToward(x_velocity, y_velocity, theta_correction)
 
         time.sleep(0.5)
 
