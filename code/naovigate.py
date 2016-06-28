@@ -4,11 +4,12 @@ import numpy as np
 import motion
 from naoqi import ALProxy
 from Sonar import Sonar
+from Controler import Controler
 #from Controler import Controler
 
 def main(robotIP, port=9559):
     sonar = Sonar(robotIP, port)
-    #controler = Controler(initialState)
+    controler = Controler()
     motionProxy = ALProxy("ALMotion", robotIP, port)
     postureProxy = ALProxy("ALRobotPosture", robotIP, port)
     frame = motion.FRAME_ROBOT # maybe test TORSO?
@@ -36,22 +37,9 @@ def main(robotIP, port=9559):
 
         lread, rread = sonar.getSampleReading(n_readings=10)
 
-        print("Sonar readings (lread, rread) = (%.2f, %.2f)" % (lread, rread))
-
         # Course correction decision step (theta is positive counterclockwise)
-        if (lread < 0.4 and rread > 1.0):
-            theta_correction = np.deg2rad(-20)
-            x_velocity = 0
-        elif (rread < 0.4 and lread > 1.0):
-            theta_correction = np.deg2rad(+20)
-            x_velocity = 0
-        elif (lread < 0.4 and rread < 0.4):
-            if lread < rread:
-                theta_correction = np.deg2rad(-55)
-            else:
-                theta_correction = np.deg2rad(+55)
-            x_velocity = 0
-
+        print("Sonar readings (lread, rread) = (%.2f, %.2f)" % (lread, rread))
+        theta_correction = controler.compute(lread=lread, rread=rread)
         print("Theta %.2f" % theta_correction)
 
         # Course correction execution step
