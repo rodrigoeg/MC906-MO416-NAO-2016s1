@@ -10,7 +10,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 class Controler:
     # Variable intervals (greater the third parameter, better the resolution)
-    sonar_interval = np.linspace(0.25, 2.25, 50)
+    sonar_interval = np.linspace(0.25, 2.55, 50)
     theta_interval = np.linspace(-1, 1, 50)
 
     # Internal variables (fuzzy stuff)
