@@ -1,0 +1,233 @@
+#VRML_SIM V8.2.1 utf8
+WorldInfo {
+  info [
+    "Aldebaran's Nao H25 V5.0"
+    "Author: Yvan Bourquin - www.cyberbotics.com"
+    "Date: 06 Feb 2012"
+  ]
+  title "Aldebaran Nao H25 V5.0"
+  basicTimeStep 20
+  FPS 20
+  contactProperties [
+    ContactProperties {
+      material1 "NAO foot material"
+      coulombFriction [
+        7
+      ]
+      bounce 0.3
+      bounceVelocity 0.003
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.22788 0.948105 0.221738 4.6363
+  position -16.2234 6.79438 -1.68206
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+PointLight {
+  ambientIntensity 1
+  intensity 0.6
+  location 2 0.9 0
+}
+Floor {
+  size 25 25
+  tileSize 0.8 0.8
+  texture [
+    "textures/checkered_marble.png"
+  ]
+}
+Wall {
+  translation 8.11156 -1.59872e-14 -2.99599
+  rotation 0 -1 0 1.0472
+  size 1 1 0.1
+}
+Wall {
+  translation 7.76506 -2.04281e-14 -2.19932
+  rotation 0 -1 0 1.0472
+  size 1 1 0.1
+}
+Wall {
+  translation 5.44476 5.50671e-14 -1.81673
+  rotation 0 1 0 0.261799
+  size 1 1 0.1
+}
+Wall {
+  translation 4.50076 0 -1.81554
+  rotation 0 1 0 6.02139
+  size 1 1 0.1
+}
+Wall {
+  translation 4.50802 0 -3.26834
+  rotation 0 1 0 6.02139
+  size 1 1 0.1
+}
+Wall {
+  translation 5.43451 -2.66454e-15 -3.27622
+  rotation 0 1 0 0.261799
+  size 1 1 0.1
+}
+Wall {
+  translation 6.25097 5.50671e-14 -2.28692
+  rotation 0 1 0 0.785398
+  size 1 1 0.1
+}
+Wall {
+  translation 7.06083 4.9738e-14 -2.62351
+  rotation 0 1 0 6.28319
+  size 1 1 0.1
+}
+Wall {
+  translation 6.4062 4.9738e-14 -3.40513
+  rotation 0 1 0 6.28319
+  size 1 1 0.1
+}
+Wall {
+  translation 7.39503 4.9738e-14 -3.40516
+  rotation 0 1 0 6.28319
+  size 1 1 0.1
+}
+Wall {
+  translation 3.5569 0 -3.27333
+  rotation 0 1 0 0.261799
+  size 1 1 0.1
+}
+Wall {
+  translation 3.57144 0 -1.8149
+  rotation 0 1 0 0.261799
+  size 1 1 0.1
+}
+Wall {
+  translation -1.89346 -1.41664e-13 -1.68425
+  size 10 1 0.1
+}
+Wall {
+  translation -1.91095 -1.06581e-12 -3.14787
+  size 10 1 0.1
+}
+Nao {
+  hidden position_0_0 3.13138e-13
+  hidden position2_0_0 -7.26853e-09
+  hidden position_0_1 1.4
+  hidden position2_0_1 3.30399e-08
+  hidden position_0_2 1.49797
+  hidden position2_0_2 -3.34986e-08
+  hidden position_0_3 -1.7473e-07
+  hidden position_0_4 -1.67805e-07
+  hidden translation_11 -1.40532e-08 -3.21571e-10 0.126493
+  hidden rotation_11 -0.00192006 0.999998 -4.30813e-05 -7.26854e-09
+  hidden translation_18 -1.19461e-08 -0.098 0.0999943
+  hidden rotation_18 1.99481e-08 1 1.67257e-08 1.4
+  hidden position_18_0 3.48829e-08
+  hidden translation_19 0.105003 -0.015 -5.57602e-07
+  hidden rotation_19 0.129371 0.991483 0.0150021 3.48829e-08
+  hidden position_19_0 -3.80337e-08
+  hidden translation_20 2.56646e-06 -1.25056e-10 -4.48193e-07
+  hidden rotation_20 0.00244726 0.990587 -0.13686 3.80337e-08
+  hidden position_20_0 1.6307e-08
+  hidden translation_21 0.0559518 -8.85001e-11 -3.17216e-07
+  hidden rotation_21 0.163572 0.981767 -0.0968384 1.6307e-08
+  hidden position_21_0 1.49632e-10
+  hidden position_21_1 1.49637e-10
+  hidden position_21_2 2.86808e-11
+  hidden translation_22 0.069 -0.013 -0.005
+  hidden rotation_22 7.3329e-15 -1 4.74835e-15 -0.96
+  hidden position_22_0 7.17952e-11
+  hidden translation_23 0.014 -3.1064e-13 4.57839e-09
+  hidden rotation_23 3.1255e-15 -1 2.49439e-15 -0.96
+  hidden position_23_0 8.16291e-12
+  hidden translation_24 0.014 -1.55431e-13 3.18179e-09
+  hidden rotation_24 0 -1 7.21269e-16 -0.96
+  hidden translation_25 0.069 0.013 -0.005
+  hidden rotation_25 6.37121e-15 -1 5.52973e-15 -0.96
+  hidden position_25_0 7.18005e-11
+  hidden translation_26 0.014 -3.09752e-13 4.57839e-09
+  hidden rotation_26 3.84677e-15 -1 3.24571e-15 -0.96
+  hidden position_26_0 8.1597e-12
+  hidden translation_27 0.014 -1.55209e-13 3.18178e-09
+  hidden rotation_27 0 -1 8.4148e-16 -0.96
+  hidden translation_28 0.049 -3.10418e-13 -0.026
+  hidden rotation_28 1.9355e-05 1 -0.000139356 2.86805e-11
+  hidden position_28_0 1.75618e-11
+  hidden translation_29 0.014 -1.54765e-13 -5.55987e-10
+  hidden rotation_29 -9.76718e-16 1 7.21269e-16 -0.96
+  hidden translation_30 -1.19461e-08 0.098 0.0999943
+  hidden rotation_30 -1.81002e-08 1 -1.67598e-08 1.49797
+  hidden position_30_0 -1.83363e-08
+  hidden translation_31 0.105003 0.015 -2.42614e-07
+  hidden rotation_31 -0.121693 0.992121 -0.0297821 1.83363e-08
+  hidden position_31_0 -1.96403e-08
+  hidden translation_32 2.59799e-06 -1.24882e-10 -1.9501e-07
+  hidden rotation_32 -0.00204232 0.997281 -0.073661 1.96403e-08
+  hidden position_32_0 -9.95933e-09
+  hidden translation_33 0.0559518 -8.83862e-11 -1.38022e-07
+  hidden rotation_33 -0.00696016 0.987111 0.159885 9.95933e-09
+  hidden position_33_0 1.53684e-10
+  hidden position_33_1 1.53672e-10
+  hidden position_33_2 2.15138e-11
+  hidden translation_34 0.069 -0.013 -0.005
+  hidden rotation_34 6.13078e-15 -1 4.77841e-15 -0.96
+  hidden position_34_0 6.8628e-11
+  hidden translation_35 0.014 -3.09752e-13 5.00274e-09
+  hidden rotation_35 3.72656e-15 -1 3.6965e-15 -0.96
+  hidden position_35_0 6.40565e-12
+  hidden translation_36 0.014 -1.54321e-13 3.11108e-09
+  hidden rotation_36 0 -1 4.80846e-16 -0.96
+  hidden translation_37 0.069 0.013 -0.005
+  hidden rotation_37 7.21269e-15 -1 4.98878e-15 -0.96
+  hidden position_37_0 6.86324e-11
+  hidden translation_38 0.014 -3.09308e-13 5.00274e-09
+  hidden rotation_38 2.76486e-15 -1 3.66645e-15 -0.96
+  hidden position_38_0 6.40421e-12
+  hidden translation_39 0.014 -1.55653e-13 3.11108e-09
+  hidden rotation_39 8.4148e-16 -1 1.44254e-15 -0.96
+  hidden translation_40 0.049 -3.09974e-13 -0.026
+  hidden rotation_40 4.90244e-05 1 -0.000190937 2.1514e-11
+  hidden position_40_0 1.66749e-11
+  hidden translation_41 0.014 -1.53655e-13 -2.4191e-10
+  hidden rotation_41 -1.20211e-16 1 8.4148e-16 -0.96
+  hidden translation_42 3.00597e-08 -0.05 -0.0849859
+  hidden rotation_42 0.964078 0.265502 -0.00788403 -1.7473e-07
+  hidden position_42_0 -1.60792e-07
+  hidden translation_43 3.14952e-08 1.9995e-09 1.48278e-05
+  hidden rotation_43 0.965876 0.258964 -0.00451775 -1.60792e-07
+  hidden position_43_0 -1.61232e-07
+  hidden translation_44 3.43844e-08 2.06291e-09 1.62064e-05
+  hidden rotation_44 0.999958 0.00797435 -0.00450431 -1.61232e-07
+  hidden position_44_0 -1.70572e-07
+  hidden translation_45 4.23943e-08 2.24185e-09 -0.09998
+  hidden rotation_45 0.99599 0.08936 -0.00436289 -1.70572e-07
+  hidden position_45_0 1.77066e-07
+  hidden translation_46 4.85906e-08 2.37841e-09 -0.102877
+  hidden rotation_46 -0.998378 0.0567643 0.00428519 1.77066e-07
+  hidden position_46_0 -1.77157e-07
+  hidden translation_47 5.13483e-08 2.43642e-09 2.43022e-05
+  hidden rotation_47 0.984521 0.175214 -0.00428759 -1.77157e-07
+  hidden translation_48 0.0199939 -0.00700612 -0.040915
+  hidden rotation_48 9.9268e-07 2.15004e-07 1 -3.14159
+  hidden translation_52 2.9458e-08 0.05 -0.0849857
+  hidden rotation_52 -0.966582 0.252282 0.0455296 -1.67805e-07
+  hidden position_52_0 1.54606e-07
+  hidden translation_53 3.08936e-08 -5.71668e-10 1.4949e-05
+  hidden rotation_53 -0.958981 0.283429 0.00486375 -1.54606e-07
+  hidden position_53_0 1.5513e-07
+  hidden translation_54 3.37829e-08 -5.02903e-10 1.63276e-05
+  hidden rotation_54 0.998955 0.0454424 -0.00485941 1.5513e-07
+  hidden position_54_0 1.63511e-07
+  hidden translation_55 4.1793e-08 -3.15166e-10 -0.0999798
+  hidden rotation_55 0.999671 0.0251926 -0.00471699 1.63511e-07
+  hidden position_55_0 1.71638e-07
+  hidden translation_56 4.7989e-08 -1.68088e-10 -0.102877
+  hidden rotation_56 0.991244 0.131961 -0.00457107 1.71638e-07
+  hidden position_56_0 1.70523e-07
+  hidden translation_57 5.07463e-08 -9.99312e-11 2.44234e-05
+  hidden rotation_57 -0.980686 0.195533 0.00460541 -1.70523e-07
+  hidden translation_58 0.0199955 0.00700482 -0.0409243
+  hidden rotation_58 6.56998e-07 1.45891e-08 1 -3.14159
+  translation -6.77834 0.333013 -2.24795
+  rotation 0.99378 0.0797778 0.0776918 -1.57715
+  controller "naoqisim"
+  controllerArgs "9559"
+}
