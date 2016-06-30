@@ -51,7 +51,7 @@ def main(robotIP, port=9559):
     # Stop motion
     motionProxy.moveToward(0, 0, 0) # I found this to be less motion breaking
     motionProxy.stopMove()
-    postureProxy.goToPosture("standInit", 0.2) # make him stand again
+    postureProxy.goToPosture("StandInit", 0.2) # make him stand again
 
     # Just to indicate we're finished
     motionProxy.rest()
