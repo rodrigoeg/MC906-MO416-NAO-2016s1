@@ -4,7 +4,7 @@
 # Original model author: Yvan Bourquin - www.cyberbotics.com
 # Copyright (c) 2014 Cyberbotics Ltd., all rights reserved.
 
-PROTO Nao_modified [
+PROTO Nao [
   field SFVec3f translation 0 0.334 0
   field SFRotation rotation 1 0 0 -1.5708
   field SFString version "5.0"
