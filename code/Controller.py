@@ -8,7 +8,7 @@ import skfuzzy.membership as mshp
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-class Controler:
+class Controller:
     # Variable intervals (greater the third parameter, better the resolution)
     sonar_interval = np.linspace(0.25, 2.55, 50)
     theta_interval = np.linspace(-1, 1, 50)
