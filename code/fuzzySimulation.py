@@ -14,15 +14,21 @@ ls, rs = np.meshgrid(con.sonar_interval, con.sonar_interval)
 t = np.zeros_like(ls)
 v = np.zeros_like(ls)
 
-for i in range(len(ls)):
-    for j in range(len(rs)):
-        con.sim.input['lsonar'] = ls[i, j]
-        con.sim.input['rsonar'] = rs[i, j]
-        
-        con.sim.compute()
-        
-        t[i, j] = con.sim.output['theta']
-        v[i, j] = con.sim.output['v_x']
+execd = False
+
+if ~execd:
+    for i in range(len(ls)):
+        for j in range(len(rs)):
+            con.sim.input['lsonar'] = ls[i, j]
+            con.sim.input['rsonar'] = rs[i, j]
+            con.sim.input['last_theta'] = 0
+            
+            con.sim.compute()
+            
+            t[i, j] = con.sim.output['theta']
+            v[i, j] = con.sim.output['v_x']
+
+    execd = True
 
 fig = plt.figure(figsize=(8, 8))
 ax = fig.add_subplot(111, projection='3d')
