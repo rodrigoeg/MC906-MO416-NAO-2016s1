@@ -4,12 +4,12 @@ import numpy as np
 import motion
 from naoqi import ALProxy
 from Sonar import Sonar
-from Controler import Controler
+from Controller import Controller
 #from Controler import Controler
 
 def main(robotIP, port=9559):
     sonar = Sonar(robotIP, port)
-    controler = Controler()
+    controler = Controller()
     motionProxy = ALProxy("ALMotion", robotIP, port)
     postureProxy = ALProxy("ALRobotPosture", robotIP, port)
     frame = motion.FRAME_ROBOT # maybe test TORSO?
@@ -25,7 +25,7 @@ def main(robotIP, port=9559):
     time.sleep(0.5)
 
     # Main loop
-    while (time.time() - start_t <= 30):
+    while (time.time() - start_t <= 180):
         # make course corrections
         # async walk
         # little sleep
